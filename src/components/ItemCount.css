@@ -1,0 +1,47 @@
+.contenedor-contador {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #ec6b75;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 20px;
+    background-color: #fbfbfb
+}
+
+
+.botonMasMenos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.botonMenos, .botonMas {
+    border: 0px solid black;
+    background-color: #fbfbfb;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.botonMas {
+    padding-right: 30px;
+}
+
+.botonMenos {
+    padding-left: 30px;
+}
+
+.botonAgregarAlCarrito button {
+    height: 40px;
+    width: 400px;
+    margin-top: 30px;
+    background-color: #ec6b75;
+    border: 0px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}

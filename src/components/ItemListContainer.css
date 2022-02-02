@@ -1,0 +1,14 @@
+
+.contenedorItemListContainer {
+    background-color: #fbfbfb;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedorItemListContainer p {
+    margin: 0;
+    padding: 25px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #3c3c3c;
+}

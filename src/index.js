@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// Mi componente 
+import NavBar from './components/navBar';
+import ItemCount from './components/ItemCount';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <NavBar />
+    <ItemCount />
   </React.StrictMode>,
   document.getElementById('root')
 );

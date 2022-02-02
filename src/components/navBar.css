@@ -1,0 +1,41 @@
+.menuNavBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    background-color: #fbfbfb;
+    height: 90px;
+    width: 100vw;
+}
+
+.logoHD {
+    height: 50px;
+    padding-right: 400px;
+}
+
+.menuNavBar div ul {
+    display: flex;
+    list-style: none;
+}
+
+.menuNavBar div ul li {
+    margin: 0 10px;
+}
+
+.menuNavBar div ul li {
+    margin: 0 10px;
+}
+
+.menuNavBar div ul li a {
+    color: #3c3c3c;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    transition: all 0.3s ease;
+}
+
+.menuNavBar div ul li a:hover {
+    color: #ec6b75;
+  }
