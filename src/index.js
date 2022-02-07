@@ -5,12 +5,10 @@ import reportWebVitals from './reportWebVitals';
 
 // Mi componente 
 import NavBar from './components/navBar';
-import ItemCount from './components/ItemCount';
 
 ReactDOM.render(
   <React.StrictMode>
     <NavBar />
-    <ItemCount />
   </React.StrictMode>,
   document.getElementById('root')
 );

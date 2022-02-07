@@ -1,9 +1,11 @@
 import './ItemListContainer.css';
+import ItemCount from './ItemCount';
+
 
 function ItemListContainer({name}) {
     return (
         <div className="contenedorItemListContainer">
-            <p>Bienvenid@ a HexaDsign {name}!</p>
+            <ItemCount />
         </div>
     )
 };

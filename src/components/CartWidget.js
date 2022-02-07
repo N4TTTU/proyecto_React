@@ -2,6 +2,7 @@ import React from 'react';
 import './CartWidget.css';
 import Carrito from '../assets/img/carrito-png.png'
 
+
 export default function NavBar() {
     return <div className='carrito-flex'>
                 <div className='imagenCarrito'>
@@ -10,7 +11,7 @@ export default function NavBar() {
                     </a>
                 </div>
                 <div>
-                    <p>4</p>
+                    <p> 0 </p>
                 </div>
             </div>
 }

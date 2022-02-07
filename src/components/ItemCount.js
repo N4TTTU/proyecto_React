@@ -1,17 +1,32 @@
 import React, {useState} from "react";
 import './ItemCount.css';
 
+
 export default function Button() {
+
+
+    let stockMin = 0;
+    let stockMax = 5;
     
     const [contador, setContador] = useState (0);
 
     function sumar() {
-        setContador(contador + 1);
+        if (contador < stockMax) {
+            setContador(contador + 1);
+        } else {
+            setContador(5);
+        }
     }
 
     function restar() {
+        if (contador > stockMin){
         setContador(contador - 1);
+    } else {
+        ;
     }
+}
+    function onAdd() {
+}
 
     return <div className="contenedor-contador">
                 <div className="nombreItem">
@@ -29,7 +44,8 @@ export default function Button() {
                     </div>
                 </div>
                 <div className="botonAgregarAlCarrito">
-                    <button>    Agregar al carrito  </button>
+                    <button onClick={() => onAdd(contador)}>    Agregar al carrito  </button>
                 </div>
             </div>
 }
+
