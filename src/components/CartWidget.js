@@ -3,8 +3,9 @@ import './CartWidget.css';
 import Carrito from '../assets/img/carrito-png.png'
 
 
-export default function NavBar() {
-    return <div className='carrito-flex'>
+export default function CartWidget() {
+    return (
+            <div className='carrito-flex'>
                 <div className='imagenCarrito'>
                     <a href='../index.js' >
                     <img src={Carrito} alt='Imagen carrito' to="../index.js" />
@@ -14,4 +15,5 @@ export default function NavBar() {
                     <p> 0 </p>
                 </div>
             </div>
-}
+    );
+};

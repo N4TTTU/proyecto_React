@@ -1,34 +1,27 @@
 import React, {useState} from "react";
 import './ItemCount.css';
 
-
-export default function Button() {
-
-
-    let stockMin = 0;
-    let stockMax = 5;
-    
-    const [contador, setContador] = useState (0);
+export default function ItemCount({ stock, initial, onAdd}) {
+    const [contadorItems, setContadorItems] = useState(initial);
 
     function sumar() {
-        if (contador < stockMax) {
-            setContador(contador + 1);
-        } else {
-            setContador(5);
+        if (contadorItems < stock) {
+            setContadorItems(contadorItems + 1);
         }
     }
 
     function restar() {
-        if (contador > stockMin){
-        setContador(contador - 1);
-    } else {
-        ;
+        if (contadorItems > 1) {
+            setContadorItems(contadorItems - 1);
+        }
     }
-}
-    function onAdd() {
-}
 
-    return <div className="contenedor-contador">
+    function agregarCarrito() {
+        onAdd(contadorItems);
+    }
+
+    return (
+        <div className="contenedor-contador">
                 <div className="nombreItem">
                     <p> Paquete streaming</p>
                 </div>
@@ -37,15 +30,16 @@ export default function Button() {
                         <button onClick={restar} className="botonMenos">    -    </button>
                     </div>
                     <div>  
-                        <p> { contador }  </p> 
+                        <p> { contadorItems }  </p> 
                     </div>
                     <div>
                         <button onClick={sumar} className="botonMas">    +    </button>
                     </div>
                 </div>
                 <div className="botonAgregarAlCarrito">
-                    <button onClick={() => onAdd(contador)}>    Agregar al carrito  </button>
+                    <button onClick={agregarCarrito}>    Agregar al carrito  </button>
                 </div>
             </div>
-}
+    )
 
+}

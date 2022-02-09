@@ -4,30 +4,23 @@
     align-items: center;
     align-content: center;
     justify-content: space-around;
-    background-color: #fbfbfb;
     height: 90px;
-    width: 100vw;
 }
 
-.logoHD {
-    height: 50px;
-    padding-right: 400px;
-}
-
-.menuNavBar div ul {
+.menuNavBar ul {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
-.menuNavBar div ul li {
+.menuNavBar ul li {
     margin: 0 10px;
 }
-
-.menuNavBar div ul li {
-    margin: 0 10px;
+.menuNavBar ul li:first-child{
+    padding-left: 180px;
 }
 
-.menuNavBar div ul li a {
+.menuNavBar ul li a {
     color: #3c3c3c;
     text-decoration: none;
     font-size: 1.1rem;
@@ -36,6 +29,6 @@
     transition: all 0.3s ease;
 }
 
-.menuNavBar div ul li a:hover {
+.menuNavBar ul li a:hover {
     color: #ec6b75;
-  }
+}
