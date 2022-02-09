@@ -4,7 +4,7 @@ import Item from './Item';
 export default function ItemList({ products }){
     
     return (
-        <div>
+        <div className='contenedor-items-tienda'>
             {
                 products.map(function(producto){
                     return(

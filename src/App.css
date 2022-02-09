@@ -1,10 +1,13 @@
+* {
+
+  background-color: #fbfbfb;
+}
 .contenedor-principal-menu header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   align-content: center;
-  background-color: #fbfbfb;
 }
 
 .logoHD {
