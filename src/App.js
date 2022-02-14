@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import { Routes, Route, Link} from 'react-router-dom';
 
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
@@ -9,7 +9,6 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App(){
     return (
-        <BrowserRouter>
             <div className='contenedor-principal-menu'>
                 <header>
                 <div>
@@ -32,7 +31,6 @@ function App(){
                     </div>
                 </main>
             </div>
-        </BrowserRouter>
     );
 }
 
