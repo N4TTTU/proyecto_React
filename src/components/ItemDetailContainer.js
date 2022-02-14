@@ -1,25 +1,27 @@
-/*
-
-1 - Ir a buscar con el getItems la lista de productos
-2 - Filtrar 1 producto (cualquiera)
-3 - Guardar en un estado propio ese producto
-4 - Pasarle ese producto al componente ItemDetail.js
-
-*/
-
-import { useEffect } from 'react';
-import { getItems } from './api/api';
+import { useEffect, useState } from 'react';
+import { getProducts } from './api/api';
+import ItemDetail from './ItemDetail';
 
 export default function ItemDetailContainer () {
+    const [item, setItem] = useState();
 
 
     useEffect(() => {
 
-        getItems().then((items) => {
-            const item = items.find((i) => i.id === 1);
-            // Este item lo guarda en un estado.
-        }) 
+        const productID = 1;
 
+        getProducts().then((items) => {
+            const item = items.find((i) => i.id === productID);
+            setItem(item);
+        }).catch((error) => {
+            console.log(error);
+        })
     }, []);
 
+
+return (
+        <div className='container-ItemDetailContainer'>
+            {!item ? <p> Cargando... </p> : <ItemDetail item={item} />}
+        </div>
+    );
 }

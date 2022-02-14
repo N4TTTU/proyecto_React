@@ -24,7 +24,7 @@ export default function ItemListContainer({greetings}) {
 
     return (
         <div>
-            <p> { greetings } </p>
+            <p className='bienvenida'> { greetings } </p>
             { products.length > 0 ? <ItemList products={products} /> : <p>Cargando...</p>}
             <ItemCount stock={5} initial={1} onAdd={onAdd} />
         </div>
