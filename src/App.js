@@ -3,6 +3,7 @@ import { Routes, Route, Link} from 'react-router-dom';
 
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
+import Error from './components/Error';
 
 import HDLogo from './assets/img/HDLogo.png';
 import ItemDetailContainer from './components/ItemDetailContainer';
@@ -27,6 +28,7 @@ function App(){
                             <Route path="/" element={ <ItemListContainer greetings="Bienvenido a HexaDsign" />  } />
                             <Route path="/category/:itemCategory" element={ <ItemListContainer greetings="Categorías" />  }  />
                             <Route path="/producto/:itemId" element={<ItemDetailContainer />} />
+                            <Route path="*" element={<Error />} />
                         </Routes>
                     </div>
                 </main>
