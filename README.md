@@ -2,11 +2,14 @@
 
 Es una empresa que está destinada a desarrollar y diseñar proyectos a diferentes usuarios.
 
-#   Contacto
+#   Instagram - Contacto
 
 https://instagram.com/HexaDsignOficial
+
+# Facebook - Contacto
+
 https://facebook.com/HexaDsignOficial
 
-#   Mail contacto
+#   Mail - Contacto
 
 nattu.p@outlook.com
