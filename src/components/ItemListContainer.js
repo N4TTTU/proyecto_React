@@ -4,19 +4,31 @@ import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
 import { getProducts } from './api/api';
+import { useParams } from 'react-router-dom';
 
 
 export default function ItemListContainer({greetings}) {
 
     const[products, setProducts] = useState([]);
+    const { itemCategory } = useParams();
 
     useEffect(() => {
         getProducts().then(function(products) {
-                console.log(products);
-
+            if (!itemCategory) {
                 setProducts(products);
+            } else {
+                
+            const itemsCategoria = products.filter((producto) => {
+                return producto.category === itemCategory;
             });
-        }, []);
+
+            setProducts(itemsCategoria);
+            }
+        }).catch((error) => {
+                console.log(error);
+            });
+
+        }, [itemCategory]);
 
     function onAdd(itemCount) {
         console.log(itemCount);

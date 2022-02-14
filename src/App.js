@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
@@ -6,27 +7,32 @@ import ItemListContainer from './components/ItemListContainer';
 import HDLogo from './assets/img/HDLogo.png';
 import ItemDetailContainer from './components/ItemDetailContainer';
 
-
 function App(){
     return (
-        <div className='contenedor-principal-menu'>
-            <header>
-              <div>
-                  <img className='logoHD' src={HDLogo} alt="Logo de HexaDsign" />
-              </div>
-              <div>
-                    <NavBar />
-              </div>
-            </header>
-            <main>
+        <BrowserRouter>
+            <div className='contenedor-principal-menu'>
+                <header>
                 <div>
-                    <ItemListContainer greetings="Bienvenido a HexaDsign" />
+                    <Link to="/">
+                    <img className='logoHD' src={HDLogo} alt="Logo de HexaDsign" />
+                    </Link>
                 </div>
                 <div>
-                    <ItemDetailContainer />
+                        <NavBar />
                 </div>
-            </main>
-        </div>
+                </header>
+
+                <main>
+                    <div>
+                        <Routes> 
+                            <Route path="/" element={ <ItemListContainer greetings="Bienvenido a HexaDsign" />  } />
+                            <Route path="/category/:itemCategory" element={ <ItemListContainer greetings="Categorías" />  }  />
+                            <Route path="/producto/:itemId" element={<ItemDetailContainer />} />
+                        </Routes>
+                    </div>
+                </main>
+            </div>
+        </BrowserRouter>
     );
 }
 
