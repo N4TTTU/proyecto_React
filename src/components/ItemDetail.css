@@ -24,3 +24,19 @@
 .itemDetailText-Precio {
     font-size: 30px;
 }
+
+
+.itemCount-Carrito{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        font-size: 20px;
+        background-color: #fbfbfb
+}
+
+
+.linkIrCarrito {
+    font-size: 15px;
+
+}

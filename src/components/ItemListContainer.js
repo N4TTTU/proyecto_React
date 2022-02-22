@@ -1,6 +1,5 @@
 import './ItemListContainer.css';
 
-import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
 import { getProducts } from './api/api';
@@ -38,7 +37,6 @@ export default function ItemListContainer({greetings}) {
         <div>
             <p className='bienvenida'> { greetings } </p>
             { products.length > 0 ? <ItemList products={products} /> : <p>Cargando...</p>}
-            <ItemCount stock={5} initial={1} onAdd={onAdd} />
         </div>
     );
 }
