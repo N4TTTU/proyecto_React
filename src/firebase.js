@@ -20,3 +20,4 @@ const app = initializeApp(firebaseConfig);
 
 // Exportar la base de datos de fstore.
 export const db = getFirestore(app);
+

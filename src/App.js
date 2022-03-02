@@ -1,13 +1,11 @@
 import './App.css';
 import { Routes, Route, Link} from 'react-router-dom';
-
-import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
-import Error from './components/Error';
-import { CartContext } from './context/CartContext';
-
-import HDLogo from './assets/img/HDLogo.png';
+import { CartContext } from './components/context/CartContext';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import NavBar from './components/NavBar';
+import Error from './components/Error';
+import HDLogo from './assets/img/HDLogo.png';
 
 
 function App(){
@@ -28,7 +26,7 @@ function App(){
                     <div>
                         <Routes> 
                             <Route path="/" element={ <ItemListContainer greetings="Bienvenido a HexaDsign" />  } />
-                            <Route path="/category/:itemCategory" element={ <ItemListContainer greetings="Categorías" />  }  />
+                            <Route path="/category/:nombreCategoria" element={ <ItemListContainer greetings="Categorías" />  }  />
                             <Route path="/producto/:itemId" element={<ItemDetailContainer />} />
                             <Route path="*" element={<Error />} />
                             <Route path='/cart' element={<CartContext/>} />

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../../context/CartContext';
+import { CartContext } from './context/CartContext';
 
 const Cart = () => {
     const { carrito, vaciarCarrito, eliminarItem } = useContext(CartContext);
@@ -22,7 +22,7 @@ const Cart = () => {
                             <button onClick={() => eliminarItem(producto.id)}> X </button>
                         </div>
                     ))}
-                    <button onClick={vaciarCarrito}>Vaciar mi carrito</button>
+                    <button onClick={vaciarCarrito}>Vaciar el carrito</button>
                 </>
             )}
         </>

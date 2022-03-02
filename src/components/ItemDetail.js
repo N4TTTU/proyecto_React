@@ -1,19 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ItemDetail.css';
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
 
 
 export default function ItemDetail({item}) {
-    const [showButton, setShowButton] = useState(false);
-
-    const onAdd = (cantidad) => {
-        setShowButton(true);
-    };
-
-
-
-
     return (
         <div>
             <div className='contenedorItemDetail'>
@@ -27,13 +18,39 @@ export default function ItemDetail({item}) {
             </div>
             </div>
             <div className='itemCount-Carrito'>
-            {
-                showButton ? (
-                    <Link to="/cart" className='linkIrCarrito'> Ir al carrito </Link>
-                ) : (
-                    <ItemCount stock={5} initial={1} onAdd={onAdd} />
-                )}
-                </div>
+                    <Link to="/cart" className='linkIrCarrito'> Agregar al carrito </Link>
+            </div>
         </div>
     );
 }
+
+// import './ItemDetail.css';
+
+// export default function ItemDetail({ item }) {
+
+//   return (
+
+//     <div className='item-detail'>
+
+//       <img src={item.pictureUrl} alt="Imagen del producto" />
+
+//       <div className='right-column'>
+
+//         <div className='details'>
+
+//           <h2>{item.title}</h2>
+
+//           <p className='price'>USD {item.price}</p>
+
+//           <p className='description'>{item.description}</p>
+
+//         </div>
+
+//         <button>Comprar</button>
+
+//       </div>
+      
+//     </div>
+
+//   )
+// }

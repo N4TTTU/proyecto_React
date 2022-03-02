@@ -11,13 +11,13 @@ export default function NavBar() {
                     <NavLink to="/">   Inicio   </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/category/DiseñoWeb">   Diseño web   </NavLink>
+                    <NavLink to="/category/diseñoweb">   Diseño web   </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/category/DiseñoGrafico">   Diseño gráfico   </NavLink>
+                    <NavLink to="/category/diseñografico">   Diseño gráfico   </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/category/Streaming">   Streaming   </NavLink>
+                    <NavLink to="/category/streaming">   Streaming   </NavLink>
                 </li>
                 <li>
                     <NavLink to="/cart"> <CartWidget /> </NavLink>

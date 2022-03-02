@@ -18,7 +18,7 @@ export default function ItemCount({ stock, onAdd}) {
     }
 
     const addToCart = () => {
-        console.log(`Se agregaron ${itemsNumber} al carrito!`);
+        onAdd(itemsNumber);
     }
 
     return (
