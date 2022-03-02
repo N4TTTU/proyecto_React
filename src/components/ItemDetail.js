@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import './ItemDetail.css';
-import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
 
 
+
 export default function ItemDetail({item}) {
+
     return (
         <div>
             <div className='contenedorItemDetail'>
