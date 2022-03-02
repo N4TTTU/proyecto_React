@@ -4,6 +4,8 @@ import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
 import { getProducts } from './api/api';
 import { useParams } from 'react-router-dom';
+import { getDocs, collection } from 'firebase/firestore';
+import { db } from '../firebase';
 
 
 export default function ItemListContainer({greetings}) {
@@ -29,9 +31,18 @@ export default function ItemListContainer({greetings}) {
 
         }, [itemCategory]);
 
-    function onAdd(itemCount) {
-        console.log(itemCount);
-    }
+        useEffect(() => {
+
+            getDocs(collection(db, "items")).then(snapshot => {
+                const products = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+                console.log(products);
+            }).catch(error => {
+                console.log(error);
+            })
+
+        })
+
+
 
     return (
         <div>

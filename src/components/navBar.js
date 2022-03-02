@@ -20,7 +20,7 @@ export default function NavBar() {
                     <NavLink to="/category/Streaming">   Streaming   </NavLink>
                 </li>
                 <li>
-                    <CartWidget />
+                    <NavLink to="/cart"> <CartWidget /> </NavLink>
                 </li>
             </ul>
          </div>

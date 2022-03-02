@@ -8,9 +8,10 @@ export default function ItemDetail({item}) {
     const [showButton, setShowButton] = useState(false);
 
     const onAdd = (cantidad) => {
-        console.log(cantidad);
         setShowButton(true);
     };
+
+
 
 
     return (

@@ -4,7 +4,7 @@ const products = [
         title: 'Paquete Diseño web Económico',
         description: 'Incluye dominio y hosting para sitio web. Sitio estático con galería de imágenes (10 máximo), formulario de contacto y más.',
         precio: 79,
-        imgUrl: 'https://quierotenerunblog.com/wp-content/uploads/2021/08/Check-75x75-1.svg',
+        imgUrl: '../assets/img/undraw_Complete_design_re_h75h.png',
         category: 'DiseñoWeb',
     },
     {

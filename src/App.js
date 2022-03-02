@@ -4,9 +4,11 @@ import { Routes, Route, Link} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import Error from './components/Error';
+import { CartContext } from './context/CartContext';
 
 import HDLogo from './assets/img/HDLogo.png';
 import ItemDetailContainer from './components/ItemDetailContainer';
+
 
 function App(){
     return (
@@ -29,10 +31,12 @@ function App(){
                             <Route path="/category/:itemCategory" element={ <ItemListContainer greetings="Categorías" />  }  />
                             <Route path="/producto/:itemId" element={<ItemDetailContainer />} />
                             <Route path="*" element={<Error />} />
+                            <Route path='/cart' element={<CartContext/>} />
                         </Routes>
                     </div>
                 </main>
             </div>
+
     );
 }
 

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './ItemCount.css';
 
-export default function ItemCount({ stock, initial, onAdd}) {
+export default function ItemCount({ stock, onAdd}) {
     const [itemsNumber, setItemsNumber] = useState(1);
 
 
@@ -12,13 +12,13 @@ export default function ItemCount({ stock, initial, onAdd}) {
     }
 
     function restar() {
-        if (itemsNumber > 1) {
+        if (itemsNumber > 0) {
             setItemsNumber(itemsNumber - 1);
         }
     }
 
     const addToCart = () => {
-        onAdd(itemsNumber);
+        console.log(`Se agregaron ${itemsNumber} al carrito!`);
     }
 
     return (
