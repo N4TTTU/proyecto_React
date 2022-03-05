@@ -1,0 +1,31 @@
+.CartTitulo-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.CartTitulo {
+    font-size: 1.5rem;
+}
+
+.CartEliminarItem button {
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    background-color: #ec6b75;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.CartEliminarItem button:hover {
+    background-color: #EC6B75;
+    border: 1px white solid;
+    cursor: pointer;
+    border-radius: 10px;
+}

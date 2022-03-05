@@ -1,10 +1,23 @@
-import React, {useContext, useState} from 'react';
+import React, { useContext, useState } from 'react';
 import './ItemDetail.css';
 import { Link } from 'react-router-dom';
+import ItemCount from './ItemCount';
+import { CartContext } from '../context/CartContext';
+
+
+const ItemDetail = ({ item }) => {
+
+    const [showButton, setShowButton] = useState(false);
+    const { addToCart } = useContext(CartContext);
 
 
 
-export default function ItemDetail({item}) {
+
+    const onAdd = (itemsNumber) => {
+        setShowButton(true);
+        addToCart(itemsNumber, item);
+    };
+
 
     return (
         <div>
@@ -16,14 +29,20 @@ export default function ItemDetail({item}) {
                 <h1>    {item.title} </h1>
                 <p className='itemDetailText-Precio'> {item.precio} €</p>
                 <p className='itemDetailText-Description'>     {item.description}   </p>
+                { showButton ? (
+                    <>
+                        <Link to="/cart">Ir al carrito</Link>
+                    </>
+                ) : (
+                    <ItemCount onAdd={onAdd} />
+                )}
             </div>
-            </div>
-            <div className='itemCount-Carrito'>
-                    <Link to="/cart" className='linkIrCarrito'> Agregar al carrito </Link>
             </div>
         </div>
     );
-}
+};
+
+export default ItemDetail;
 
 // import './ItemDetail.css';
 

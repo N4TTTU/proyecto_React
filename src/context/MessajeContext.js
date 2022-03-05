@@ -2,7 +2,7 @@ import { createContext, useState } from 'react';
 
 export const MessageContext = createContext();
 
-export const MessageContextProvider = ({ children }) => {
+export const MessageProvider = ({ children }) => {
     const [message, setMessage] = useState('');
     const [severity, setSeverity] = useState('');
 
@@ -17,8 +17,8 @@ export const MessageContextProvider = ({ children }) => {
     };
 
     return (
-        <MessageContext.Provider value={{ message, severity, handleMessage }}>
+        <MessageProvider value={{ message, severity, handleMessage }}>
             {children}
-        </MessageContext.Provider>
+        </MessageProvider>
     );
 };

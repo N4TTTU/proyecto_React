@@ -4,15 +4,14 @@ import Carrito from '../assets/img/carrito-png.png'
 import './CartWidget.css'
 
 
-export default function CartWidget() {
+const CartWidget = () => {
     return (
             <div className='carrito-flex'>
                 <div className='imagenCarrito'>
                     <img src={Carrito} alt='Imagen carrito' />
                 </div>
-                <div>
-                    <p> 0 </p>
-                </div>
             </div>
     );
 };
+
+export default CartWidget;

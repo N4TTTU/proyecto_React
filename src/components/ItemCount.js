@@ -1,14 +1,22 @@
 import React, {useState} from "react";
 import './ItemCount.css';
 
-export default function ItemCount({ stock, onAdd}) {
+function ItemCount({ stock, onAdd}) {
     const [itemsNumber, setItemsNumber] = useState(1);
 
 
-    function sumar() {
-        if (itemsNumber < stock) {
-            setItemsNumber(itemsNumber + 1);
-        }
+    // function sumar() {
+    //     if (itemsNumber < stock) {
+    //         setItemsNumber(itemsNumber + 1);
+    //         console.log("+1");
+    //     }
+    // }
+
+
+    function sumar({item}) {
+        if (itemsNumber < item.stock)
+        setItemsNumber(itemsNumber + 1);
+        console.log("+1!!")
     }
 
     function restar() {
@@ -17,7 +25,7 @@ export default function ItemCount({ stock, onAdd}) {
         }
     }
 
-    const addToCart = () => {
+    const agregarAlCarrito = () => {
         onAdd(itemsNumber);
     }
 
@@ -35,9 +43,11 @@ export default function ItemCount({ stock, onAdd}) {
                     </div>
                 </div>
                 <div className="botonAgregarAlCarrito">
-                    <button disabled={itemsNumber === 0} onClick={addToCart}>    Agregar al carrito  </button>
+                    <button disabled={itemsNumber === 0} onClick={agregarAlCarrito}>    Agregar al carrito  </button>
                 </div>
             </div>
     );
 
 };
+
+export default ItemCount;
