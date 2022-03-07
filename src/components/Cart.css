@@ -1,31 +1,111 @@
-.CartTitulo-flex {
+.contenidoCart {
+    width: auto;
+    padding: 100px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.cartTitulo-flex {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     align-content: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.contenedorTitleIMG {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: end;
+    align-content: end;
+    justify-content: center;
+}
+
+
+
+
+.tituloCarrito {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+
+.tituloPrecios {
+    margin: 0;
+    font-size: 16px;
+}
+
+.flex-precios{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.lineaDiv hr {
+    margin: 0;
+}
+
+.contenedorTextos {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: start;
+    align-content: center;
+    justify-content: center;
+}
+
+.contenedorTextos img {
+    height: 150px;
+}
+
+.alineacionTitle{
+    font-size: 26px;
+    margin: 0;
+    padding: 0px 0px 20p 0px;
+}
+
+.alineacionTitleEliminar button {
+    background-color: transparent;
+    border: 0px solid;
+    cursor: pointer;
+    color: red;
+    font-size: 14px;
+    padding: 0;
+}
+
+.alineacionTitleEliminar button:hover {
+    color: #EC6B75
+}
+
+.cantidadEliminar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.cantidadEliminar p {
+    font-size: 16px;
+}
+
+
+.botonVaciarCarrito {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
 
 }
 
-.CartTitulo {
-    font-size: 1.5rem;
-}
-
-.CartEliminarItem button {
+.botonVaciarCarrito button {
     height: 40px;
-    width: 40px;
+    width: 200px;
     margin-top: 10px;
     background-color: #ec6b75;
-    border: 1px solid white;
+    border: 1px solid #eb4351;
     border-radius: 10px;
     color: white;
     font-size: 16px;
     cursor: pointer;
-}
-
-.CartEliminarItem button:hover {
-    background-color: #EC6B75;
-    border: 1px white solid;
-    cursor: pointer;
-    border-radius: 10px;
 }

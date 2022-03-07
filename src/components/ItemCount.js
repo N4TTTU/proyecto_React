@@ -13,8 +13,8 @@ function ItemCount({ stock, onAdd}) {
     // }
 
 
-    function sumar({item}) {
-        if (itemsNumber < item.stock)
+    function sumar() {
+        if (itemsNumber < stock)
         setItemsNumber(itemsNumber + 1);
         console.log("+1!!")
     }

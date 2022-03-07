@@ -4,6 +4,7 @@ export const CartContext = createContext([]);
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
+    
 
     const addToCart = (itemsNumber, item) => {
         if (isOnCart(item.id)) {
