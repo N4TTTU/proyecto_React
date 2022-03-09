@@ -5,6 +5,8 @@
     align-content: center;
     justify-content: space-around;
     height: 90px;
+    max-width: 1400px;
+    margin: auto;
 }
 
 .menuNavBar ul {
@@ -37,3 +39,10 @@
 .logoHD {
     height: 60px;
   }
+
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    padding: 50px 0px;
+}

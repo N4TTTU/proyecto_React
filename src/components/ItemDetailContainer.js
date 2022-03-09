@@ -31,23 +31,3 @@ export default function ItemDetailContainer() {
       </div>
     )
   };
-
-
-
-//         getProducts().then((items) => {
-//             const item = items.find((i) => {
-//                 return i.id.toString() === itemId
-//             });
-//             setItem(item);
-//         }).catch((error) => {
-//             console.log(error);
-//         })
-//     }, [itemId]);
-
-
-// return (
-//         <div className='container-ItemDetailContainer'>
-//             {!item ? <p> Cargando... </p> : <ItemDetail item={item} />}
-//         </div>
-//     );
-// }

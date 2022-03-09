@@ -1,11 +1,39 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import './Cart.css';
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../firebase';
 
 const Cart = () => {
-    const { cart, vaciarCarrito, eliminarItem } = useContext(CartContext);
-    const precioTotal = cart.reduce((acc, item) => (acc += item.precio * item.cantidad), 0)
+    const { cart, vaciarCarrito, eliminarItem, precioTotal } = useContext(CartContext);
+    const [user, setUser] = useState('');
+    const [mail, setMail] = useState('');
+    const [orderId, setOrderId] = useState('');
+    const [loading, setLoading] = useState('');
+
+    const handleSubmit = (e) => {
+            e.preventDefault();
+            setLoading(true);
+            const userOrder = {
+                date: new Date(),
+                user: { user, mail },
+                items: cart,
+                total: precioTotal,
+            };
+            addDoc(collection(db, 'orders'), userOrder).then((res) => {
+                setOrderId(res.id);
+            }).catch((error) => {
+                console.log(error);
+            }).finally(() => {
+                setLoading(false);
+                vaciarCarrito();
+            });
+        };
+
+        if ( orderId !== '' ) {
+            return <p>Compra exitosa! El ID de tu compra es: {orderId} </p>
+        }
 
     return (
         <div className='contenidoCart'>
@@ -51,20 +79,21 @@ const Cart = () => {
                             <p></p>
                             <p className='flex-precios'>Total: {precioTotal} €</p>
                         </div>
+                        <div>
+                        <div>
+                            <form onSubmit={handleSubmit} action="">
+                                <input onChange={(e) => setUser(e.target.value)} value={user} type="text" placeholder='Nombre' />
+                                <input onChange={(e) => setMail(e.target.value)} value={mail} type="email" placeholder='Correo' />
+                                <button>
+                                    { loading ? 'Estamos procesando tu compra...' : 'Finalizar compra'}
+                                </button>
+                            </form>
+                        </div>
+                        </div>
                 </div>
             )}
         </div>
     );
-
-    // {item.title}  > Nombre
-    // {item.cantidad} > Cantidad de producto
-    // {item.precio} > Precio del producto
-    // {precioTotal} > Precio total de los productos
-
-
-
-
-
 };
 
 export default Cart;
