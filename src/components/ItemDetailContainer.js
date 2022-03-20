@@ -13,6 +13,7 @@ export default function ItemDetailContainer() {
   
       const itemReferencia = doc(db, "items", itemId);
 
+      
       getDoc(itemReferencia).then((snapshot) => {
         
         if(snapshot.exists()) {
@@ -31,3 +32,4 @@ export default function ItemDetailContainer() {
       </div>
     )
   };
+ 

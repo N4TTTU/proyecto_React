@@ -4,14 +4,10 @@ import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 import { CartContext } from '../context/CartContext';
 
-
 const ItemDetail = ({ item }) => {
 
     const [showButton, setShowButton] = useState(false);
     const { addToCart } = useContext(CartContext);
-
-
-
 
     const onAdd = (itemsNumber) => {
         setShowButton(true);
@@ -41,36 +37,4 @@ const ItemDetail = ({ item }) => {
         </div>
     );
 };
-
 export default ItemDetail;
-
-// import './ItemDetail.css';
-
-// export default function ItemDetail({ item }) {
-
-//   return (
-
-//     <div className='item-detail'>
-
-//       <img src={item.pictureUrl} alt="Imagen del producto" />
-
-//       <div className='right-column'>
-
-//         <div className='details'>
-
-//           <h2>{item.title}</h2>
-
-//           <p className='price'>USD {item.price}</p>
-
-//           <p className='description'>{item.description}</p>
-
-//         </div>
-
-//         <button>Comprar</button>
-
-//       </div>
-      
-//     </div>
-
-//   )
-// }

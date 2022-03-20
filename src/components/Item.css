@@ -1,13 +1,19 @@
 .contenedor-items {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     align-content: center;
     justify-content: center;
     padding: 0px 50px;
+    width: 300px;
+    max-width: 1000px;
+    margin: 30px;
 }
 
-
-.contenedor-items img {
-    height: 100px;
+.contenedorItemImg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 200px;
 }

@@ -1,22 +1,12 @@
 import React, {useState} from "react";
 import './ItemCount.css';
 
-function ItemCount({ stock, onAdd}) {
+function ItemCount({ onAdd }) {
     const [itemsNumber, setItemsNumber] = useState(1);
 
-
-    // function sumar() {
-    //     if (itemsNumber < stock) {
-    //         setItemsNumber(itemsNumber + 1);
-    //         console.log("+1");
-    //     }
-    // }
-
-
     function sumar() {
-        if (itemsNumber < stock)
+        if (itemsNumber < 100)
         setItemsNumber(itemsNumber + 1);
-        console.log("+1!!")
     }
 
     function restar() {
@@ -47,7 +37,6 @@ function ItemCount({ stock, onAdd}) {
                 </div>
             </div>
     );
-
 };
 
 export default ItemCount;

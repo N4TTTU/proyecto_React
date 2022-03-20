@@ -7,7 +7,7 @@ import NavBar from './components/NavBar';
 import Error from './components/Error';
 import AddItemContainer from './components/AddItemContainer';
 import Cart from './components/Cart';
-
+import CheckOut from './components/CheckOut';
 
 
 function App(){
@@ -22,14 +22,13 @@ function App(){
                             <Route path="/producto/:itemId" element={<ItemDetailContainer greetings="Categoría en específico" />} />
                             <Route path='/additem' element={<AddItemContainer />} />
                             <Route path='/cart' element={<Cart />} />
-                            {/* <Route path='/edititem' element={<EditItem />} /> */}
                             <Route path="*" element={<Error />} />
+                            <Route path='/checkout' element={<CheckOut />} />
                         </Routes>
                     </BrowserRouter>
                 </CartProvider>
     );
 }
-
 
 export default App;
 

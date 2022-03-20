@@ -1,0 +1,41 @@
+.contenedorCheckOut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: 1px solid #ec6b75;
+  border-radius: 4px;
+  margin: 10px;
+  width: 220px;
+}
+
+input[placeholder="Nombre"],
+input[placeholder="Correo"] {
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.contenedorCheckOut button {
+    border: none;
+    background-color: #ec6b75;
+    color: white;
+    height: 30px;
+    width: 200px;
+    border-radius: 50px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.textOrderId {
+    text-align: center;
+    padding: 100px 0px;
+}
+
+.checkout-text {
+  text-align: center;
+}
